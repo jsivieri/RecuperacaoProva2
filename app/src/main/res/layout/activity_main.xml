@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/tx_contagem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="60dp"
+        android:text="Contagem:"
+        android:textSize="18dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/contador"
+        android:layout_width="250dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="108dp"
+        android:background="#00FF01"
+        android:gravity="center"
+        android:text="0"
+        android:textColor="@color/white"
+        android:textSize="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toStartOf="@+id/tx_contagem"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.045" />
+
+    <Button
+        android:id="@+id/bt_maisUm"
+        android:layout_width="372dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="204dp"
+        android:backgroundTint="#d7d7d7"
+        android:text="+ 1"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/contador"
+        app:layout_constraintHorizontal_bias="0.589"
+        app:layout_constraintStart_toStartOf="@+id/bt_zerar"
+        app:layout_constraintTop_toTopOf="@+id/tx_contagem"
+        android:onClick="somarUm"/>
+
+    <Button
+        android:id="@+id/bt_menosUm"
+        android:layout_width="372dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="60dp"
+        android:backgroundTint="#d7d7d7"
+        android:text="- 1"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/bt_maisUm"
+        app:layout_constraintTop_toTopOf="@+id/bt_maisUm"
+        android:onClick="subtraiUm"/>
+
+    <Button
+        android:id="@+id/bt_zerar"
+        android:layout_width="372dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="124dp"
+        android:backgroundTint="#d7d7d7"
+        android:text="ZERAR CONTAGEM"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/contador"
+        app:layout_constraintTop_toTopOf="@+id/bt_maisUm"
+        android:onClick="zeraContador"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
